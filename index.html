@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dott.ssa Marina Lumento - Home</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqk1wB0iFzV4P/xZC+y7Og25z4Dm/z0nBxo8B+j5xGqil/FVb1MHbYF3bL9p9Q+xh1+1y/w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #e6b39a;
+      color: #5e7a7d;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem; /* Riduzione della dimensione del titolo per mobile */
+      font-weight: 700;
+    }
+
+    nav {
+      background-color: #5e7a7d;
+      color: #e6b39a;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0 10px; /* Riduzione dello spazio tra i link per mobile */
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #e6b39a;
+      font-weight: 700;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    main {
+      padding: 20px; /* Riduzione del padding per mobile */
+      max-width: 960px;
+      margin: 10px auto; /* Riduzione del margine per mobile */
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #5e7a7d;
+      font-size: 1.8rem; /* Riduzione della dimensione del titolo di sezione per mobile */
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 10px; /* Riduzione del margine inferiore per mobile */
+    }
+
+    footer {
+      background-color: #5e7a7d;
+      color: #e6b39a;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    .social-links {
+      list-style: none;
+      margin: 15px 0 0; /* Riduzione del margine superiore per mobile */
+      padding: 0;
+      text-align: center;
+    }
+
+    .social-links li {
+      display: inline-block;
+      margin: 0 5px; /* Riduzione dello spazio tra i link social per mobile */
+    }
+
+    .social-links a {
+      text-decoration: none;
+      color: #e6b39a;
+      font-size: 1.2rem; /* Riduzione della dimensione dei link social per mobile */
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #fff;
+    }
+
+    .hero {
+      background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80");
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 50px 0; /* Riduzione del padding per mobile */
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem; /* Riduzione della dimensione del titolo per mobile */
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1rem; /* Riduzione della dimensione del paragrafo per mobile */
+      margin-bottom: 20px;
+    }
+
+    .hero .button {
+      display: inline-block;
+      background-color: #5e7a7d;
+      color: #fff;
+      padding: 10px 20px; /* Riduzione del padding per mobile */
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero .button:hover {
+      background-color: #3a5bcc;
+    }
+
+    .about {
+      padding: 30px 0; /* Riduzione del padding per mobile */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about .left {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .about .left img {
+      max-width: 80%; /* Riduzione della larghezza dell'immagine per mobile */
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .about .right {
+      width: 100%;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2rem; /* Riduzione della dimensione del titolo per mobile */
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      margin-bottom: 10px; /* Riduzione del margine inferiore per mobile */
+    }
+
+    .services {
+      background-color: #e6b39a;
+      padding: 30px 0; /* Riduzione del padding per mobile */
+      text-align: center;
+    }
+
+    .services .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 10px; /* Riduzione del padding per mobile */
+    }
+
+    .services h2 {
+      color: #fff;
+      font-size: 2rem; /* Riduzione della dimensione del titolo per mobile */
+      margin-bottom: 20px;
+    }
+
+    .services .card {
+      display: block; /* Blocco di visualizzazione per mobile */
+      background-color: #fff;
+      margin: 10px auto; /* Margine per mobile */
+      padding: 20px; /* Riduzione del padding per mobile */
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      width: 90%; /* Larghezza per mobile */
+      box-sizing: border-box;
+    }
+
+    .services .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .services .card h3 {
+      font-size: 1.5rem; /* Riduzione della dimensione del titolo per mobile */
+      margin-bottom: 10px;
+    }
+
+    .services .card p {
+      margin-bottom: 15px;
+    }
+
+    .services .card .button {
+      display: inline-block;
+      background-color: #5e7a7d;
+      color: #fff;
+      padding: 10px 20px; /* Riduzione del padding per mobile */
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .services .card .button:hover {
+      background-color: #3a5bcc;
+    }
+
+    .testimonials {
+      padding: 30px 0; /* Riduzione del padding per mobile */
+    }
+
+    .testimonials .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 10px; /* Riduzione del padding per mobile */
+    }
+
+    .testimonials h2 {
+      font-size: 2rem; /* Riduzione della dimensione del titolo per mobile */
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .testimonials .testimonial {
+      background-color: #fff;
+      padding: 20px; /* Riduzione del padding per mobile */
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 15px;
+    }
+
+    .testimonials .testimonial .quote {
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+
+    .testimonials .testimonial .author {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .testimonials .testimonial .role {
+      font-style: italic;
+    }
+
+    .blog {
+      padding: 30px 0; /* Riduzione del padding per mobile */
+    }
+
+    .blog .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 10px; /* Riduzione del padding per mobile */
+    }
+
+    .blog h2 {
+      font-size: 2rem; /* Riduzione della dimensione del titolo per mobile */
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .blog .post {
+      background-color: #fff;
+      padding: 20px; /* Riduzione del padding per mobile */
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 15px;
+    }
+
+    .blog .post .image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .blog .post h3 {
+      font-size: 1.5rem; /* Riduzione della dimensione del titolo per mobile */
+      margin-bottom: 10px;
+    }
+
+    .blog .post .excerpt {
+      margin-bottom: 15px;
+    }
+
+    .blog .post .button {
+      display: inline-block;
+      background-color: #5e7a7d;
+      color: #fff;
+      padding: 10px 20px; /* Riduzione del padding per mobile */
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .blog .post .button:hover {
+      background-color: #3a5bcc;
+    }
+
+    .contact {
+      background-color: #5e7a7d;
+      padding: 30px 0; /* Riduzione del padding per mobile */
+      color: #fff;
+      text-align: center;
+    }
+
+    .contact .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 10px; /* Riduzione del padding per mobile */
+    }
+
+    .contact h2 {
+      font-size: 2rem; /* Riduzione della dimensione del titolo per mobile */
+      margin-bottom: 20px;
+    }
+
+    .contact form {
+      max-width: 90%; /* Larghezza massima del form per mobile */
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .contact label {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+
+    .contact input,
+    .contact textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px; /* Riduzione del margine inferiore per mobile */
+      border: none;
+      border-radius: 5px;
+    }
+
+    .contact button {
+      display: inline-block;
+      background-color: #e6b39a;
+      color: #5e7a7d;
+      padding: 10px 20px; /* Riduzione del padding per mobile */
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .contact button:hover {
+      background-color: #3a5bcc;
+      color: #fff;
+    }
+
+    .contact .contact-info {
+      font-size: 1.8rem; /* Riduzione della dimensione del testo per mobile */
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+
+    #calendar-container {
+      background-color: #fff;
+      padding: 20px; /* Riduzione del padding per mobile */
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    #calendar {
+      width: 100%;
+      height: 400px; /* Riduzione dell'altezza del calendario per mobile */
+    }
+
+    #search-bar {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    #search-bar input {
+      width: 80%; /* Larghezza del campo di ricerca per mobile */
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #event-modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      padding: 15px; /* Riduzione del padding per mobile */
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      width: 90%; /* Larghezza del modal per mobile */
+      max-width: 600px;
+    }
+
+    #event-modal h3 {
+      margin-top: 0;
+    }
+
+    #event-modal button {
+      margin-top: 10px;
+      background-color: #e6b39a;
+      color: #5e7a7d;
+      padding: 8px 16px; /* Riduzione del padding per mobile */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #event-modal button:hover {
+      background-color: #3a5bcc;
+      color: #fff;
+    }
+
+    #event-modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+    /* Stili per la navigazione mobile */
+    @media (max-width: 768px) {
+      nav ul {
+        text-align: left; /* Allineamento a sinistra per mobile */
+      }
+
+      nav li {
+        display: block; /* Visualizza i link in blocco per mobile */
+        margin: 5px 0; /* Margine per mobile */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dott.ssa Marina Lumento</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">Chi sono</a></li>
+      <li><a href="#services">Servizi</a></li>
+      <li><a href="#testimonials">Testimonianze</a></li>
+      <li><a href="#blog">Articoli</a></li>
+      <li><a href="#contact">Contattami</a></li>
+      <li><a href="#calendar-container">Appuntamenti</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <h1>Benvenuti nel mio sito</h1>
+    <p>Il tuo viaggio alla ricerca del miglior servizio inizia qui.</p>
+    <a href="#about" class="button">Maggiori informazioni</a>
+  </div>
+
+  <main>
+    <section id="about" class="about">
+      <div class="container">
+        <div class="left">
+          <img src="https://s3-eu-west-1.amazonaws.com/miodottore.it/doctor/101d4a/101d4a8e12794838a1a98f3dcccc8e3c_220_square.jpg" alt="About Me Image" class="image">
+        </div>
+        <div class="right">
+          <h2>Chi sono</h2>
+          <p>Sono una psicologa con esperienza pluriennale nel trattamento di diverse problematiche psicologiche, tra cui ansia, depressione, disturbi del sonno e difficoltà relazionali. Mi dedico con passione all'ascolto e alla comprensione delle tue esigenze, offrendoti un percorso personalizzato per il tuo benessere emotivo.</p>
+          <p>Il mio approccio è basato su un'attenta analisi della tua situazione, tenendo conto delle tue risorse e dei tuoi obiettivi. Lavoro con te per sviluppare strategie efficaci per superare le tue sfide e raggiungere una maggiore serenità.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="container">
+        <h2>Servizi</h2>
+        <div class="card">
+          <h3>Colloquio psicologico</h3>
+          <p>Un'opportunità per esplorare i tuoi pensieri, sentimenti e comportamenti in un ambiente accogliente e confidenziale. Con la mia guida professionale, potrai affrontare sfide personali e sviluppare strategie per il benessere emotivo e psicologico. Insieme, possiamo lavorare verso una vita più equilibrata e soddisfacente. Piazza Emilio Alessandrini, Pescara. Studio Privato Dr.ssa Marina Lumento. (50€)</p>      
+          <a href="#contact" class="button">Contattami</a>
+        </div>
+        <div class="card">
+          <h3>Consulenza online</h3>
+          <p>Consulenza online con una psicologa esperta: ricevi supporto professionale comodamente da casa tua. Affronta i tuoi problemi con una guida empatica e competente, tramite sessioni sicure e confidenziali. (45€)</p>
+          <a href="#contact" class="button">Contattami</a>
+        </div>
+        <div class="card">
+          <h3>Consulenza di coppia</h3>
+          <p>Se stai attraversando un momento difficile nella tua relazione, la consulenza di coppia può aiutarti a ritrovare la comunicazione, il rispetto e l'intimità. Offro un ambiente sicuro e professionale per affrontare le sfide e riconnettervi come coppia. (60€)</p>
+          <a href="#contact" class="button">Contattami</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <h2>Testimonianze</h2>
+        <div class="testimonial">
+          <p class="quote">"Ho iniziato un percorso qualche mese fa con la Dottoressa e mi sono subito trovata bene e a mio agio. Con la sua professionalità, gentilezza ed empatia mi sta aiutando molto non solo a superare un periodo negativo, ma soprattutto a capire come affrontare meglio il futuro. Sono molto più serena adesso, non posso che consigliarla."</p>
+          <p class="author">Silvia L.</p>
+          <p class="role"></p>
+        </div>
+        <div class="testimonial">
+          <p class="quote">"È da poco che ho intrapreso un percorso con la dottoressa, ma mi sento già un’altra persona, meno ansiosa e aperta al futuro. Mi sta aiutando a vedere le cose da un altro punto di vista e a capire cosa mi porta a vivere in modo ansioso. Credo che grazie al suo supporto riuscirò non solo a superare un brutto momento ma soprattutto ad approcciare il futuro con più serenità"</p>
+          <p class="author">Marta</p>
+          <p class="role"></p>
+        </div>
+        <div class="testimonial">
+          <p class="quote">"Grazie alla Dott.ssa Marina ho trovato un vero supporto di qualità unito all'empatia e alla grande professionalità. Il mio percorso di crescita personale ha portato quasi da subito ottimi risultati; dovevo sciogliere dei nodi esistenziali ingombranti e lei ha subito compreso come aiutarmi. E' disponibile, accogliente e molto attenta alle esigenze altrui. La consiglio caldamente."</p>
+          <p class="author">Suzanne</p>
+          <p class="role"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="blog">
+      <div class="container">
+        <h2>Articoli recenti</h2>
+        <div class="post">
+          <img src="https://images.unsplash.com/photo-1532074272443-f59c099387c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="Blog Post Image" class="image">
+          <h3>Gestire l'ansia: consigli pratici</h3>
+          <p class="excerpt">Scopri alcuni suggerimenti utili per affrontare l'ansia e ritrovare la calma nella tua vita quotidiana. In questo articolo, esploreremo tecniche di rilassamento, strategie di pensiero positivo e la gestione delle situazioni stressanti.</p>
+          <a href="articolo1.html" class="button">Leggi di più</a>
+        </div>
+        <div class="post">
+          <img src="https://images.unsplash.com/photo-1597645587853-ed3a3a51348c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80" alt="Blog Post Image" class="image">
+          <h3>L'importanza della comunicazione di coppia</h3>
+          <p class="excerpt">La comunicazione è il fondamento di una relazione sana. In questo articolo, analizzeremo l'impatto della comunicazione sulla coppia e forniremo suggerimenti per migliorare la comunicazione e rafforzare il legame.</p>
+          <a href="articolo2.html" class="button">Leggi di più</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contattami</h2>
+        <form
+          action="https://formspree.io/f/xwkgdkno"
+          method="POST"
+        >
+          <div class="contact-info">Contattami</div>
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" required>
+    
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+    
+          <label for="phone">Telefono (facoltativo)</label>
+          <input type="tel" id="phone" name="phone">
+    
+          <label for="message">Messaggio</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+    
+          <button type="submit">Invia messaggio</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="calendar-container" class="calendar-container">
+      <div class="container">
+        <h2>Prenota un appuntamento</h2>
+        <div id="search-bar">
+          <input type="text" placeholder="Cerca appuntamento..." />
+        </div>
+        <div id="calendar"></div>
+      </div>
+    </section>
+
+    <div id="event-modal">
+      <h3>Dettagli dell'evento</h3>
+      <p id="event-title"></p>
+      <p id="event-start"></p>
+      <p id="event-end"></p>
+      <button id="close-event-modal">Chiudi</button>
+    </div>
+
+    <div id="event-modal-overlay"></div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth',
+          events: [
+            { title: 'Colloquio psicologico', start: '2024-03-10', end: '2024-03-10' },
+            { title: 'Consulenza online', start: '2024-03-15', end: '2024-03-15' },
+            { title: 'Consulenza di coppia', start: '2024-03-22', end: '2024-03-22' }
+          ],
+          eventClick: function(info) {
+            document.getElementById('event-title').innerText = info.event.title;
+            document.getElementById('event-start').innerText = 'Inizio: ' + info.event.start.toLocaleDateString();
+            document.getElementById('event-end').innerText = 'Fine: ' + info.event.end.toLocaleDateString();
+            document.getElementById('event-modal').style.display = 'block';
+            document.getElementById('event-modal-overlay').style.display = 'block';
+          }
+        });
+
+        calendar.render();
+
+        document.getElementById('close-event-modal').addEventListener('click', function() {
+          document.getElementById('event-modal').style.display = 'none';
+          document.getElementById('event-modal-overlay').style.display = 'none';
+        });
+      });
+    </script>
+  </main>
+
+  <footer>
+    <p>© 2024 Dott.ssa Marina Lumento. Tutti i diritti riservati.</p>
+    <ul class="social-links">
+      <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+  </footer>
+</body>
+</html>
