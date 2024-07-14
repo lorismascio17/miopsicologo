@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonianze - Dott.ssa Marina Lumento</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqk1wB0iFzV4P/xZC+y7Og25z4Dm/z0nBxo8B+j5xGqil/FVb1MHbYF3bL9p9Q+xh1+1y/w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #e6b39a;
+      color: #5e7a7d;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    nav {
+      background-color: #5e7a7d;
+      color: #e6b39a;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #e6b39a;
+      font-weight: 700;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 20px auto;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonials {
+      background-color: #fff;
+      padding: 60px 40px;
+      margin: -5px auto ;
+      max-width: 1000px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      
+    }
+
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 60px;
+      position: relative;
+      margin-top: -50px;
+    }
+
+    .testimonials-header:after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background-color: #e6b39a;
+      margin: 20px auto 0;
+    }
+
+    .testimonials h2 {
+      color: #5e7a7d;
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 10px; /* Ridotto lo spazio tra titolo e sottotitolo */
+    }
+
+    .testimonials-subheading {
+      font-size: 1.2rem;
+      color: #777;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .testimonial {
+      margin-bottom: 30px;
+      padding: 30px;
+      border: none;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .testimonial:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial .quote {
+      font-style: italic;
+      color: #5e7a7d;
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .testimonial .author {
+      font-weight: 700;
+      color: #e6b39a;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    footer {
+      background-color: #5e7a7d;
+      color: #e6b39a;
+      text-align: center;
+      padding: 20px 0;
+      position: relative;
+      z-index: 10;
+    }
+
+    footer p {
+      margin: 0;
+      color: #e6b39a;
+    }
+
+    footer .social-links {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    footer .social-links li {
+      margin: 0 10px;
+    }
+
+    footer .social-links a {
+      color: #e6b39a;
+      text-decoration: none;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    footer .social-links a:hover {
+      color: #ffffff;
+    }
+
+    footer a {
+      color: #e6b39a;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ffffff;
+    }
+
+    @media (max-width: 768px) {
+      .testimonials {
+        padding: 40px 20px;
+      }
+
+      .testimonials h2 {
+        font-size: 2.2rem;
+      }
+
+      .testimonial {
+        padding: 20px;
+      }
+
+      nav ul {
+        padding: 0;
+      }
+
+      nav li {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dott.ssa Marina Lumento</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">Chi sono</a></li>
+      <li><a href="index.html#services">Servizi</a></li>
+      <li><a href="index.html#testimonials">Testimonianze</a></li>
+      <li><a href="index.html#blog">Articoli</a></li>
+      <li><a href="index.html#contact">Contattami</a></li>
+      <li><a href="index.html#calendar-container">Appuntamenti</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="testimonials" class="testimonials">
+      <div class="testimonials-header">
+        <h2>Testimonianze</h2>
+        <p class="testimonials-subheading">Scopri cosa dicono i nostri pazienti riguardo alla loro esperienza con la Dott.ssa Marina Lumento.</p>
+      </div>
+      <div class="testimonials-container">
+        <div class="testimonial">
+          <p class="quote">"Ho iniziato un percorso qualche mese fa con la Dottoressa e mi sono subito trovata bene e a mio agio. Con la sua professionalità, gentilezza ed empatia mi sta aiutando molto non solo a superare un periodo negativo, ma soprattutto a capire come affrontare meglio il futuro. Sono molto più serena adesso, non posso che consigliarla."</p>
+          <p class="author">Silvia L.</p>
+        </div>
+        <div class="testimonial">
+          <p class="quote">"È da poco che ho intrapreso un percorso con la dottoressa, ma mi sento già un'altra persona, meno ansiosa e aperta al futuro. Mi sta aiutando a vedere le cose da un altro punto di vista e a capire cosa mi porta a vivere in modo ansioso. Credo che grazie al suo supporto riuscirò non solo a superare un brutto momento ma soprattutto ad approcciare il futuro con più serenità."</p>
+          <p class="author">Marta</p>
+        </div>
+        <div class="testimonial">
+          <p class="quote">"Grazie alla Dott.ssa Marina ho trovato un vero supporto di qualità unito all'empatia e alla grande professionalità. Il mio percorso di crescita personale ha portato quasi da subito ottimi risultati; dovevo sciogliere dei nodi esistenziali ingombranti e lei ha subito compreso come aiutarmi. È disponibile, accogliente e molto attenta alle esigenze altrui. La consiglio caldamente."</p>
+          <p class="author">Suzanne</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Dott.ssa Marina Lumento. Tutti i diritti riservati.</p>
+    <ul class="social-links">
+        <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+    </ul>
+    <p>
+        <a href="https://www.iubenda.com/privacy-policy/87564829" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe" title="Privacy Policy">Privacy Policy</a>
+        <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+        |
+        <a href="https://www.iubenda.com/privacy-policy/87564829/cookie-policy" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe" title="Cookie Policy">Cookie Policy</a>
+        <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+    </p>
+  </footer>
+</body>
+</html>
